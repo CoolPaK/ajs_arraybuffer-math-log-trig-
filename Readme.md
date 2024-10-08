@@ -1,6 +1,6 @@
 ## AJS_Arraybuffer-Math (log/trig)
 
-
+[![Build status](https://ci.appveyor.com/api/projects/status/3qtuu9g7g3erk4nt?svg=true)](https://ci.appveyor.com/project/CoolPaK/ajs-arraybuffer-math-log-trig)
 ---
 
 # Домашнее задание к лекции «`ArrayBuffer`»
