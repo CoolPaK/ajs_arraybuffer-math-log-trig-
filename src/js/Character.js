@@ -24,7 +24,7 @@ class Character {
     }
 
     getAttackMultiplier() {
-        return 1 - (this.distance - 1) * 0.1; // Рассчитываем множитель атаки на основе расстояния
+        return 1 - (this.distance - 1) * 0.1;
     }
 }
 
