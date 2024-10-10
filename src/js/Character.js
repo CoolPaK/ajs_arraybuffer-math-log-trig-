@@ -1,38 +1,31 @@
 class Character {
-      constructor(name, baseAttack) {
-            this.name = name;
-            this._baseAttack = baseAttack;
-            this.stoned = false;
-            this.distance = 1; // default distance
-      }
+    constructor(name, baseAttack) {
+        this.name = name;
+        this._baseAttack = baseAttack;
+        this.stoned = false;
+        this.distance = 1;
+    }
 
-      get attack() {
-            let attack = this._baseAttack;
-            if (this.stoned) {
-                  attack -= Math.log2(this.distance) * 5;
-            }
-            return Math.max(attack * this.getAttackMultiplier(), 0);
-      }
+    get attack() {
+        let attack = this._baseAttack;
+        if (this.stoned) {
+             attack -= Math.log2(this.distance) * 5;
+    }
 
-      set stoned(value) {
-            this._stoned = value;
-      }
+    return Math.max(attack * this.getAttackMultiplier(), 0);
+    }
 
-      get stoned() {
-            return this._stoned;
-      }
+    set stoned(value) {
+        this._stoned = value;
+    }
 
-      set baseAttack(value) {
-            this._baseAttack = value;
-      }
+    get stoned() {
+        return this._stoned;
+    }
 
-      get baseAttack() {
-            return this._baseAttack;
-      }
-
-      getAttackMultiplier() {
-            return 1 - (this.distance - 1) * 0.1;
-      }
+    getAttackMultiplier() {
+        return 1 - (this.distance - 1) * 0.1; // Рассчитываем множитель атаки на основе расстояния
+    }
 }
 
 export default Character;
